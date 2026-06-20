@@ -1,0 +1,4 @@
+# chip-desktop-configs: launch the tint2 panel under openbox.
+# Inert on flavors using a different WM (e.g. pocketchip's awesome does not read
+# openbox's autostart).
+tint2 &

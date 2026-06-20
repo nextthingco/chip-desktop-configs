@@ -1,0 +1,16 @@
+Source: chip-desktop-configs
+Section: misc
+Priority: optional
+Maintainer: Ben Young <computermouth@proton.me>
+Build-Depends: debhelper (>= 9)
+Standards-Version: 3.9.5
+Homepage: github.com/NextThingCo
+
+Package: chip-desktop-configs
+Architecture: all
+Depends: ${misc:Depends}, chip-configs
+Description: Shared openbox/desktop look-and-feel for the C.H.I.P.
+ GTK theme + small-screen tweaks, a compact tint2 panel, and an openbox autostart
+ that launches it. Flavor-agnostic desktop shell config; the openbox/tint2 bits
+ are inert under other WMs (e.g. pocketchip's awesome). Depends on chip-configs
+ for the underlying hardware setup.
