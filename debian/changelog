@@ -1,7 +1,13 @@
 chip-desktop-configs (0.1) trixie; urgency=low
 
   * Initial release. Shared desktop shell configs: GTK theme (.gtkrc-2.0 + gtk-2.0
-    file chooser), leafpad small-screen config, a compact tint2 panel (tint2rc),
-    and an openbox autostart that launches tint2.
+    file chooser), a compact tint2 panel (tint2rc) with a start button at the left
+    that opens the openbox root menu, an openbox rc.xml binding Super+M to
+    ShowMenu root-menu (what the start button fakes via xdotool), and an openbox
+    autostart that launches tint2.
+  * Ship the CHIP desktop wallpaper at /usr/share/chip/wallpapers/chip-desktop.png
+    plus nitrogen skel configs (nitrogen.cfg, bg-saved.cfg) that point at it. The
+    openbox autostart runs `nitrogen --restore` to paint it. Needs the nitrogen
+    package (added to the gui flavor's package list).
 
  -- Ben Young <computermouth@proton.me>  Thu, 19 Jun 2026 13:00:00 -0500

@@ -1,4 +1,10 @@
-# chip-desktop-configs: launch the tint2 panel under openbox.
+# chip-desktop-configs: launch the desktop shell under openbox.
 # Inert on flavors using a different WM (e.g. pocketchip's awesome does not read
 # openbox's autostart).
+
+# Paint the wallpaper from ~/.config/nitrogen/bg-saved.cfg (the CHIP desktop image
+# in /usr/share/chip/wallpapers). --restore applies the saved bg without opening
+# the nitrogen GUI.
+nitrogen --restore &
+
 tint2 &
