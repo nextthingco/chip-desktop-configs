@@ -1,3 +1,9 @@
+chip-desktop-configs (0.2) trixie; urgency=low
+
+  * Move pocketchip configs to other package
+
+ -- Ben Young <computermouth@proton.me>  Tue, 23 Jun 2026 18:00:00 -0500
+
 chip-desktop-configs (0.1) trixie; urgency=low
 
   * Initial release. Shared desktop shell configs: GTK theme (.gtkrc-2.0 + gtk-2.0
