@@ -19,6 +19,9 @@
   <item label="File manager">
     <action name="Execute"><execute>pcmanfm</execute></action>
   </item>
+  <item label="TIC-80">
+    <action name="Execute"><execute>tic80</execute></action>
+  </item>
   <!-- This requires the presence of the 'obamenu' package to work -->
   <menu id="/Debian" />
   <separator />
