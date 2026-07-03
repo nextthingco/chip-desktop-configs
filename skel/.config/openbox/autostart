@@ -9,4 +9,15 @@ nitrogen --restore &
 
 tint2 &
 
+# nm-applet persists Wi-Fi PSKs through the Secret Service (libsecret); with no
+# running, unlocked keyring the passwords are never stored and NetworkManager fails
+# on the next boot with "secrets were required, but not provided". This only bit the
+# gui flavor -- headless/pocketchip use nmtui, which stores PSKs system-owned and
+# needs no keyring. This session autologs in with no password, so start gnome-keyring
+# and unlock its login keyring with an empty passphrase, then export the addresses
+# nm-applet (via libsecret) looks the daemon up by. Needs the gnome-keyring package.
+eval "$(printf '' | gnome-keyring-daemon --daemonize --login)"
+eval "$(gnome-keyring-daemon --start --components=secrets)"
+export GNOME_KEYRING_CONTROL SSH_AUTH_SOCK
+
 nm-applet &
